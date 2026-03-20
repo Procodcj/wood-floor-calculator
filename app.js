@@ -1,3 +1,16 @@
+function reset() {
+  clearErrors();
+  ["length", "width", "numberOfBoards", "bundlesPerPallet"].forEach(id => {
+    document.getElementById(id).value = "";
+  });
+  document.getElementById("lengthUnit").value = "feet";
+  document.getElementById("widthUnit").value = "inches";
+  const resultEl = document.getElementById("result");
+  resultEl.style.display = "none";
+  resultEl.innerHTML = "";
+  document.getElementById("length").focus();
+}
+
 function parseFraction(value) {
   if (!value || !value.trim()) return NaN;
   const parts = value.trim().split(/\s+/);

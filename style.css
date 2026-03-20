@@ -261,3 +261,25 @@ select {
   color: #c0a080;
   letter-spacing: 0.08em;
 }
+
+.reset-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 11px;
+  background: transparent;
+  color: var(--wood-mid);
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1.5px solid var(--wood-pale);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.reset-btn:hover {
+  background: var(--wood-pale);
+  border-color: var(--wood-light);
+  color: var(--wood-dark);
+}
