@@ -1,3 +1,5 @@
+let history = [];
+
 function reset() {
   clearErrors();
   ["length", "width", "numberOfBoards", "bundlesPerPallet"].forEach(id => {
@@ -88,6 +90,9 @@ function calculate() {
   const sqftPerBundle = sqftPerBoard * numBoards;
   const sqftPerPallet = sqftPerBundle * numBundles;
 
+  history.push({ label: `Pallet ${history.length + 1}`, value: sqftPerPallet });
+  renderHistory();
+  
   resultEl.style.display = "block";
   resultEl.innerHTML = `
     <div class="result-box">
@@ -105,4 +110,36 @@ function calculate() {
       </div>
     </div>
   `;
+}
+
+
+function renderHistory() {
+  const historyEl = document.getElementById("history");
+  if (history.length === 0) {
+    historyEl.innerHTML = "";
+    return;
+  }
+  const total = history.reduce((sum, item) => sum + item.value, 0);
+  const items = history.map((item, i) => `
+    <div class="history-item">
+      <span class="history-item-label">${item.label}</span>
+      <span>${fmt(item.value)} ft²</span>
+    </div>
+  `).join("");
+
+  historyEl.innerHTML = `
+    <div class="history-box">
+      <div class="history-title">History</div>
+      ${items}
+      <div class="history-total">
+        <span class="history-total-label">Grand Total</span>
+        <span class="history-total-value">${fmt(total)} ft²</span>
+      </div>
+    </div>
+  `;
+}
+
+function clearHistory() {
+  history = [];
+  renderHistory();
 }
