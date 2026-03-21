@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Estimator — Wood Floor Suite</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="room-estimator.css">
+</head>
+<body>
+  <div class="card">
+
+    <div class="header">
+      <a href="index.html" class="back-link">← Wood Floor Suite</a>
+      <div class="header-label">Project · Rooms · Sections</div>
+      <h1>Room <span>Estimator</span></h1>
+    </div>
+
+    <div class="body">
+
+      <!-- Add Room -->
+      <div class="field-group">
+        <label for="roomName">Room Name</label>
+        <div class="input-row">
+          <input type="text" id="roomName" placeholder="e.g. Kitchen, Master Bedroom">
+          <button class="add-btn" onclick="addRoom()">Add</button>
+        </div>
+      </div>
+
+      <div id="roomList"></div>
+
+      <div id="grandTotal"></div>
+
+    </div>
+
+    <div class="footer">Measurements in feet · Multiple sections per room supported</div>
+  </div>
+
+  <script src="room-estimator.js"></script>
+</body>
+</html>
