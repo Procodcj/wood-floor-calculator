@@ -3,75 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wood Floor Calculator</title>
+  <title>Wood Floor Suite</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
 </head>
-<body>
-  <div class="card">
+<body class="home">
+  <div class="home-card">
 
-    <div class="header">
-      <div class="header-label">Pallet · Bundle · Board</div>
-      <h1>Wood Floor <span>Calculator</span></h1>
+    <div class="home-header">
+      <div class="header-label">Flooring Tools</div>
+      <h1>Wood Floor <span>Suite</span></h1>
     </div>
 
-    <div class="body">
-
-      <!-- Length -->
-      <div class="field-group">
-        <label for="length">Bundle Length</label>
-        <div class="input-row">
-          <input type="text" id="length" placeholder="e.g. 12 3/4">
-          <select id="lengthUnit">
-            <option value="feet">ft</option>
-            <option value="inches">in</option>
-          </select>
+    <div class="home-body">
+      <a href="pallet-calculator.html" class="tool-card">
+        <div class="tool-icon">📦</div>
+        <div class="tool-info">
+          <div class="tool-name">Pallet Calculator</div>
+          <div class="tool-desc">Calculate square footage from pallet and bundle data</div>
         </div>
-        <div class="hint">Accepts whole numbers, decimals, or fractions (e.g. 12 3/4)</div>
-      </div>
+        <div class="tool-arrow">→</div>
+      </a>
 
-      <!-- Width -->
-      <div class="field-group">
-        <label for="width">Board Width</label>
-        <div class="input-row">
-          <input type="text" id="width" placeholder="e.g. 5 1/2">
-          <select id="widthUnit">
-            <option value="inches">in</option>
-            <option value="feet">ft</option>
-          </select>
+      <a href="room-estimator.html" class="tool-card">
+        <div class="tool-icon">📐</div>
+        <div class="tool-info">
+          <div class="tool-name">Room Estimator</div>
+          <div class="tool-desc">Measure rooms and calculate total project square footage</div>
         </div>
-        <div class="hint">Accepts whole numbers, decimals, or fractions (e.g. 5 1/2)</div>
-      </div>
-
-      <!-- Boards per bundle -->
-      <div class="field-group">
-        <label for="numberOfBoards">Boards per Bundle</label>
-        <input type="number" id="numberOfBoards" placeholder="e.g. 20" min="1">
-      </div>
-
-      <!-- Bundles per pallet -->
-      <div class="field-group">
-        <label for="bundlesPerPallet">Bundles per Pallet</label>
-        <input type="number" id="bundlesPerPallet" placeholder="e.g. 8" min="1">
-      </div>
-
-      <hr class="divider">
-
-      <button class="calc-btn" onclick="calculate()">Calculate Square Footage</button>
-
-      <button class="reset-btn" onclick="reset()">New Calculation</button>
-
-      <button class="clear-btn" onclick="clearHistory()">Clear History</button>
-
-      <div id="result"></div>
-
-      <div id="history"></div>
-
+        <div class="tool-arrow">→</div>
+      </a>
     </div>
 
-    <div class="footer">Fractions accepted · Inches or feet · Per-bundle breakdown included</div>
+    <div class="footer">Wood Floor Suite · Flooring tools for professionals</div>
   </div>
-
-  <script src="app.js"></script>
 </body>
 </html>

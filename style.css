@@ -359,3 +359,18 @@ select {
   font-size: 22px;
   color: var(--wood-dark);
 }
+
+.back-link {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wood-light);
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--cream);
+}
