@@ -197,7 +197,6 @@ select {
 
 #result {
   margin-top: 22px;
-  display: none;
   animation: fadein 0.35s ease both;
 }
 
