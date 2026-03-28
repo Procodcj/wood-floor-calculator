@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stain Calculator — Wood Floor Suite</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stain-calculator.css">
+</head>
+<body>
+  <div class="card">
+
+    <div class="header">
+      <a href="index.html" class="back-link">← Wood Floor Suite</a>
+      <div class="header-label">Oil Based · Water Based · Mix</div>
+      <h1>Stain <span>Calculator</span></h1>
+    </div>
+
+    <div class="body">
+
+      <!-- Step 1: Stain Type -->
+      <div class="field-group">
+        <label>Stain Type</label>
+        <div class="type-selector">
+          <button class="type-btn active" id="btnOil" onclick="selectType('oil')">Oil Based</button>
+          <button class="type-btn" id="btnWater" onclick="selectType('water')">Water Based</button>
+        </div>
+        <div class="hint" id="coverageHint"></div>
+      </div>
+
+     <!-- Step 2: Area (hidden until type selected) -->
+      <div class="field-group" id="areaGroup" style="display:none;">
+        <label for="area">Total Area (sq ft)</label>
+        <input type="number" id="area" placeholder="e.g. 1000" min="1">
+      </div>
+
+      <!-- Step 3: Colors (hidden until type selected) -->
+      <div class="field-group" id="colorGroup" style="display:none;">
+        <label>Mix Formula</label>
+        <div id="colorList"></div>
+        <button class="add-section-btn" onclick="addColor()">+ Add Color</button>
+      </div>
+
+      <hr class="divider" id="divider" style="display:none;">
+
+      <button class="calc-btn" id="calcBtn" style="display:none;" onclick="calculate()">Calculate</button>
+      <button class="reset-btn" id="resetBtn" style="display:none;" onclick="resetAll()">New Calculation</button>
+
+      <div id="result"></div>
+
+    </div>
+
+    <div class="footer">Oil based · Water based · Exact mix quantities</div>
+  </div>
+
+  <script src="stain-calculator.js"></script>
+</body>
+</html>
