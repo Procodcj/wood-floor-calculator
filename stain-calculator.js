@@ -11,7 +11,7 @@ function selectType(type) {
   if (type === "oil") {
     hint.textContent = "1 quart covers approximately 165 sq ft";
   } else {
-    hint.textContent = "1 gallon covers approximately 700 sq ft (Hypertone Basic Stain)";
+    hint.textContent = "1 gallon covers approximately 700 sq ft";
   }
 
   document.getElementById("areaGroup").style.display = "block";
